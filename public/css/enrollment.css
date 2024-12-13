@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #dededebd;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  background: linear-gradient(to right, #00136f, #047b99);
+  color: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+
+nav:hover {
+  width: 350px;
+  transition: 1s;
+  background: linear-gradient(to right, #00136f, #047b99);
+}
+
+.container nav ul li a:hover {
+  background-color: #F9D626;
+  /* Light gray background on hover */
+  color: #00136f;
+  /* Blue text color on hover */
+  border-radius: 8px;
+  /* Rounded edges */
+  transition: background-color 1s, color 0.5s;
+  /* Smooth hover effect */
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a {
+  position: relative;
+  width: 270px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  /* Added transition */
+}
+
+nav .fas {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #eee;
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+a:hover {
+  background: #eee;
+  transform: scale(1.05);
+  /* Slightly enlarges the link */
+}
+
+a:hover i {
+  color: #c2c2c2;
+  transition: 0.5s;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+}
+
+/* MAin Section */
+.main {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.main-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.main-top i {
+  position: absolute;
+  right: 0;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+.main .users {
+  display: flex;
+  width: 100%;
+}
+
+/* Enrollment Form */
+.enrollment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+
+}
+
+/* Label Styling for the Form */
+.enrollment-form label {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Input and Select Fields Styling */
+.enrollment-form input,
+.enrollment-form select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Button Styling for Form */
+.enrollment-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enrollment-form button:hover {
+  background-color: #45a049;
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin-bottom: 17px;
+}
+
+/* Image Styling inside the Card */
+.users .card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  margin-bottom: 20px;
+}
+
+/* Cancel Button inside Card */
+.card button {
+  width: 20%;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #c2c2c2;
+}
+
+.card button:hover {
+  background: #c2c2c2;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* Name Section Styling */
+.name-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.name-section input {
+  width: 100%;
+}
+
+/* Gender and Age Section Styling */
+.gender-age-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Three equal-width columns /
+  column-gap: 5px; / Adds spacing between items */
+
+  width: 100%;
+}
+
+.gender-age-section select,
+.gender-age-section input[type="number"],
+.gender-age-section input[type="date"] {
+  width: 900px;
+  max-width: 200px;
+  padding: 5px;
+  box-sizing: border-box;
+
+}
+
+
+/* Contact Section */
+.contact-section,
+.program-year-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contact-section input,
+.program-year-section select {
+  width: 45%;
+}
+
+/* Available Courses Section */
+#available-courses {
+  width: 100%;
+}
+
+/* Buttons Section Styling */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-buttons button {
+  color: #000;
+}
+
+
+
+/* Styling the Dropdown Button */
+.available-courses-dropdown .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.available-courses-dropdown .dropbtn {
+  background-color: #999999;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Styling the dropdown content */
+.available-courses-dropdown .dropdown-content {
+  display: block;
+  /* Initially hide the dropdown */
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.available-courses-dropdown .dropdown-content label {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.available-courses-dropdown .dropdown-content label input {
+  margin-right: 10px;
+}
+
+.section-buttons {
+  display: flex;
+  /* Use flexbox for alignment */
+  justify-content: space-between;
+  /* Spread buttons to left and right */
+  padding: 20px;
+  /* Add padding around the container */
+}
+
+.block-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #adadad;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  /* Allow buttons to size dynamically */
+}
+
+.block-section button:hover {
+  background-color: #8c8c8c;
+  color: #fff;
+}
+
+
+
+
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.close-verification {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-modal {
+  background-color: #6C757D;
+  padding: 5px 10px;
+  border-radius: 100%;
+  position: absolute;
+  color: white;
+  right: 10%;
+}
+
+.close-modal:hover {
+  background-color: #aaa;
+  color: #000;
+}
+
+#confirm-selection {
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ff04;
+}
+
+#cancel-selection {
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #6C757D;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* Center vertically and horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  height: fit-content;
+  /* Width of the modal */
+  text-align: center;
+
+}
+
+.modal-buttons {
+  margin-top: 15px;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+}
+
+#saveProfileBtn {
+  background-color: aqua;
+  width: auto;
+  color: black;
+  padding: 5px 10px;
+}
+
+#saveProfileBtn:hover {
+  background-color: #6C757D;
+}
+
+.courseRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button.viewSectionBtn {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #eee;
+  background-color: #00136f;
+}
+
+.viewSectionBtn:hover {
+  cursor: pointer;
+}
+
+#courseSectionContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.sectionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 15px;
+  width: 350px;
+  height: 200px;
+}
+
+
+.registeredSection {
+  width: 40%;
+  overflow-x: scroll;
+}
+
+h3 {
+  margin: 20px 5px 0px 0px;
+}
+
+.profile-container {
+  background-color: #ffffff;
+  /* Light background for the profile section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.profile-heading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #00136f;
+  margin-bottom: 15px;
+}
+
+.profile-label {
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
